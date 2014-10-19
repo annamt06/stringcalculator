@@ -51,7 +51,7 @@ public class Calculator {
     private static int sum(String[] numbers){
  	    int total = 0;
         for(String number : numbers){
-
+        	
         	if(number.contains(",")){
         		total += sum(splitNumbers(number, ","));
         	}
@@ -63,6 +63,9 @@ public class Calculator {
         	}*/
         	else
         	{
+        		if(toInt(number) > 1000){
+        		number = "0";
+        		}
         		total += toInt(number);
         	}
 		}
