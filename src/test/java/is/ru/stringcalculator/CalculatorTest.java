@@ -53,4 +53,9 @@ public class CalculatorTest {
     public void testNumberNegative(){
     	Calculator.add("-1,2");
     }
+
+    @Test
+    public void testToLarge(){
+    	assertEquals(2, Calculator.add("1001,2"));
+    }
 }
